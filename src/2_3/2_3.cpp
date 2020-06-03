@@ -58,7 +58,12 @@ int main(int argc, char** argv)
             g_state = -1;
         else if (c == 27)   //ESC
             break;
+
+        if (getWindowProperty("2_3", WND_PROP_VISIBLE) < 0)
+            break;
     }
+
+    destroyWindow("2_3");
 
     return 0;	
 }

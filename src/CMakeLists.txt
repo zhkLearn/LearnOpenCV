@@ -13,7 +13,7 @@ else()
     set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE PATH "Installation Directory")
 endif()
 
-project(Learn)
+project(LearnOpenCV)
 
 add_subdirectory(2_1)
 add_subdirectory(2_3)

@@ -21,6 +21,7 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(2_1 2_1.cpp)
 target_link_libraries(2_1 ${OpenCV_LIBS})
+set_property(TARGET 2_1 APPEND PROPERTY DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 
 install(
    TARGETS 2_1

@@ -23,6 +23,11 @@ int main(int argc, char** argv)
 
     string str = argv[1];
     g_cap.open(str);
+    if (!g_cap.isOpened())
+    {
+        cout << "Open video failed!" << endl;
+        return -1;
+    }
 
     int frames = (int)g_cap.get(CAP_PROP_FRAME_COUNT);
     int w = (int)g_cap.get(CAP_PROP_FRAME_WIDTH);

@@ -13,18 +13,18 @@ else()
     set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE PATH "Installation Directory")
 endif()
 
-project(2_3)
+project(2_5)
 
 set(OpenCV_STATIC True)
 find_package(OpenCV REQUIRED)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
-add_executable(2_3 2_3.cpp)
-target_link_libraries(2_3 ${OpenCV_LIBS})
-set_property(TARGET 2_3 APPEND PROPERTY DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
+add_executable(2_5 2_5.cpp)
+target_link_libraries(2_5 ${OpenCV_LIBS})
+set_property(TARGET 2_5 APPEND PROPERTY DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 
 install(
-   TARGETS 2_3
+   TARGETS 2_5
    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}

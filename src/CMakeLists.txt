@@ -15,5 +15,8 @@ endif()
 
 project(LearnOpenCV)
 
+set(CMAKE_DEBUG_POSTFIX "D")
+
 add_subdirectory(2_1)
 add_subdirectory(2_3)
+add_subdirectory(2_5)

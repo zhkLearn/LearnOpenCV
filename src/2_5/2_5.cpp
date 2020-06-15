@@ -35,9 +35,12 @@ void example2_5(const Mat& img)
     Canny(img, out_canny, 10, 100, 3, true);
     imshow("2_5_out_canny", out_canny);
 
-   
     Vec3b bgr = img.at<Vec3b>(20, 780); // Notice: (y, x)
     cout << "BGR(100, 100) = (" << (unsigned int)bgr[0] << ", " << (unsigned int)bgr[1] << ", " << (unsigned int)bgr[2] << ")" << endl;
+
+    Mat out_polar;
+    logPolar(img, out_polar, Point2f(img.cols/2, img.rows/2), 100, WARP_FILL_OUTLIERS);
+    imshow("2_5_out_logPolar", out_polar);
 
     waitKey(0);
 
